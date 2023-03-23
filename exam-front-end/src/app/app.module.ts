@@ -14,7 +14,8 @@ import { HeaderComponent } from './shared/header/header.component';
 import { ResumeComponent } from './container/resume/resume.component';
 import { Exam1Component } from './container/exam1/exam1.component';
 import { Exam2Component } from './container/exam2/exam2.component';
-import { Exam3Component } from './container/exam3/exam3.component';
+import { Exam3dialogComponent } from './container/exam3dialog/exam3dialog.component';
+import { Exam3listComponent } from './container/exam3list/exam3list.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +27,8 @@ import { Exam3Component } from './container/exam3/exam3.component';
     ResumeComponent,
     Exam1Component,
     Exam2Component,
-    Exam3Component,
+    Exam3dialogComponent,
+    Exam3listComponent,
   ],
   imports: [
     BrowserModule,

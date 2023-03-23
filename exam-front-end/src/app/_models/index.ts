@@ -1,3 +1,4 @@
 export * from './nav-item';
-export * from './ImgModel';
+export * from './TblFruitsModel';
+export * from './uploadfile';
  

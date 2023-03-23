@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { Exam1Component } from './container/exam1/exam1.component';
 import { Exam2Component } from './container/exam2/exam2.component';
-import { Exam3Component } from './container/exam3/exam3.component';
+import { Exam3dialogComponent } from './container/exam3dialog/exam3dialog.component';
 import { ResumeComponent } from './container/resume/resume.component';
 
 const routes: Routes = [
@@ -26,7 +26,7 @@ const routes: Routes = [
   {
     path:'exam/exam3',
     data:{breadcrumb:'ข้อสอบข้อที่ 3'},
-    component: Exam3Component,
+    component: Exam3dialogComponent,
   }
 ];
 @NgModule({
