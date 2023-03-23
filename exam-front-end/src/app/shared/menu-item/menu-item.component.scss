@@ -1,0 +1,12 @@
+.menu-item {
+    height: 35px;
+    font-size: 14px; // .8125rem;
+    font-weight: normal;
+    .menu-item-icon {
+        font-size: 16px;
+    }
+}
+
+.mat-item.active {
+    background-color: #efefef;
+}

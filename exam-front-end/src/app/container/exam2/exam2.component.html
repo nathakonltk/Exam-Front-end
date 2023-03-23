@@ -1,0 +1,13 @@
+
+<textarea rows="25"  cols="100">
+    SELECT
+        w.EmployeeID,w.WorkDate,s.Clock as CardScan,e.Clock as ClockOut
+    FROM
+        WorkSchedule w
+    INNER JOIN CardScan s
+    ON w.EmployeeID=s.EmployeeID AND w.WorkDate=CONVERT(date,s.Clock)
+    INNER JOIN CardScan e
+    ON w.EmployeeID=e.EmployeeID AND w.WorkDate=CONVERT(date,e.Clock)
+    WHERE s.Clock BETWEEN DATEADD(HOUR, -5, w.BeginTime) AND w.BeginTime 
+        AND e.Clock BETWEEN w.EndTime AND  DATEADD(HOUR, +5, w.EndTime)
+</textarea>
