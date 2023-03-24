@@ -13,7 +13,9 @@ export class TblFruitsService {
     private http: HttpClient,
   ) { }
   GetAll():  any{
-    return this.http.get<TblFruitsModel[]>(`${environment.apiUrl}/TblFruits/GetAll`).pipe(map((res: any) => {
+    console.log("GetAll");
+    return this.http.get(`${environment.apiUrl}/TblFruits/GetAll`).pipe(map((res: any) => {
+      console.log(res);
       return res;
     }));
   }

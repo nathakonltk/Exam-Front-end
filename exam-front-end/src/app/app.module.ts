@@ -16,6 +16,7 @@ import { Exam1Component } from './container/exam1/exam1.component';
 import { Exam2Component } from './container/exam2/exam2.component';
 import { Exam3dialogComponent } from './container/exam3dialog/exam3dialog.component';
 import { Exam3listComponent } from './container/exam3list/exam3list.component';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +35,8 @@ import { Exam3listComponent } from './container/exam3list/exam3list.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

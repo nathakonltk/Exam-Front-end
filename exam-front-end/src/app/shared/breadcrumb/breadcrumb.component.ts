@@ -24,11 +24,14 @@ export class BreadcrumbComponent  {
                 
               if(event instanceof NavigationStart) {
                 url=event.url;
-                console.log("router::",this.router.config);
-                //this.ChangeBreadcrumb(url);
+                //console.log("url::",url);
+                //console.log("router::",this.router.config);
                 let res : any = this.router.config.find(i => "/"+i.path==url);
-                //console.log("BreadcrumbComponent: res :",res.data.breadcrumb);
-                this.breadcrumb=res.data.breadcrumb;
+                //console.log("BreadcrumbComponent: res :",res);
+                if(res){
+                  this.breadcrumb=res.data.breadcrumb;
+                }
+                
               }
             });
     

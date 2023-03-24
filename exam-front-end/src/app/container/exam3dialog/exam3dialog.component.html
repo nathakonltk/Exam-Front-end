@@ -1,2 +1,45 @@
-<form [formGroup]="form">
-</form>
+<div class="" fxFlex="100%" >
+    <form [formGroup]="form" class="">
+        <mat-card fxFlex>
+            <mat-card-header back>
+                <h1>Create</h1>
+            </mat-card-header>
+            <mat-card-content>
+               
+                <div class="row" fxLayout="row" fxLayout.xs="column" fxLayoutGap="10px grid" fxLayoutAlign="center center" >
+                    <mat-form-field fxFlex="30%">
+                        <mat-label>Name:</mat-label>
+                        <input matInput type="text" formControlName="name">
+                        
+                    </mat-form-field>
+                </div>
+                <div class="row" fxLayout="row" fxLayout.xs="column" fxLayoutGap="10px grid" fxLayoutAlign="center center" >
+                        <mat-card class="example-card" fxFlex="30%">
+                            <mat-card-content>
+                                <img mat-card-image src='{{(Photo ? Photo : "assets/images/NoImg.jpg")}}' style="width: 100%;">
+                            </mat-card-content>
+                            <mat-card-actions>
+                                <div class="example-button-row" fxFlex="100%">
+                                    <button mat-flat-button  class="color-edit" fxFlex="100%" type="button" (click)="file.click()">อัพโหลดรูป</button>
+                                    <input mat-raised-button #file formControlName="file" type="file" accept="image/x-png,image/gif,image/jpeg" (change)="uploadImage($event)" fxHide>
+                                </div>
+                                <div fxLayout="row" fxLayoutAlign="center center" >
+                                    
+                                </div>
+                            </mat-card-actions>
+                        </mat-card>
+                        
+                </div>
+                
+            </mat-card-content>
+            
+            <mat-card-actions  class="row" >
+                <div class="row" fxLayout="row" fxLayout.xs="column" fxFlex="100%"  fxLayoutAlign="center center" >
+                    <button mat-raised-button color="primary" (click)="save(form.controls)" fxFlex="30%" style="margin: .5rem;"><mat-icon>save</mat-icon>Save</button>
+                    <button mat-stroked-button (click)="FormReset()" fxFlex="30%" style="margin: .5rem;">Cancel</button>
+                </div>
+            </mat-card-actions>
+        </mat-card>
+    </form>
+
+</div>
